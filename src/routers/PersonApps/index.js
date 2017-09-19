@@ -26,6 +26,7 @@ class Demo extends React.Component{
     }
 
     handleCancel = () => {
+        this.props.form.resetFields()
         this.setState({
             addVisible: false
         })

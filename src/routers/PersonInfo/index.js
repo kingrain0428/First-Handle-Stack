@@ -101,11 +101,11 @@ class Demo extends React.Component{
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log(values)
-                console.log(this.state.fileList)
+                // console.log(values)
+                // console.log(this.state.fileList)
                 localStorage.setItem('isCertifi', true);
                 localStorage.setItem('infoFormValue', JSON.stringify(values));
-                // window.location.reload();
+                window.location.reload();
             }
         });
     }
@@ -118,12 +118,6 @@ class Demo extends React.Component{
                 isShow: false
             })
             this.props.form.setFieldsValue(infoFormValue);
-            this.setState({
-                fileList: infoFormValue.idCardReverse.file,
-                fileListOne: infoFormValue.upBusinessLicenseNumber.file,
-                fileListTwo: infoFormValue.handleIDCard.file,
-                fileListThree: infoFormValue.idCardFront.file,
-            })
         }
     }
 
