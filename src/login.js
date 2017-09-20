@@ -74,9 +74,10 @@ class NormalLoginForm extends React.Component {
                 </div>
                 <Modal
                     title={modalTitle}
-                    wrapClassName="vertical-center-modal"
                     visible={visible}
+                    style={{ top: 200, paddingLeft: 80, paddingRight: 80 }}
                     onCancel={() => this.handleCancel}
+                    closable={false}
                     footer={[
                         <Button key="cancel" type='primary' size='large' onClick={this.handleCancel}>确定</Button>
                     ]}

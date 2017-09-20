@@ -111,6 +111,10 @@ class HomePage extends React.Component{
         location.hash = '/layout'
 
     }
+    //image click
+    handleImg = () => {
+        window.location.reload()
+    }
     render() {
         const { notLogin, isLogin, navLists, data, blockHeight, users, transactNum} = this.state;
         const columns = [
@@ -140,7 +144,7 @@ class HomePage extends React.Component{
         return(
             <div id="xianglian-home-page">
                 <div className="title_fixed" ref='titleFixed'>
-                    <img src={HeadSrc} className="title_img"/>
+                    <img src={HeadSrc} className="title_img" onClick={this.handleImg}/>
                     <ul onClick={this.handleNavlist}>
                         {
                             navLists.map(function (list, arg2) {

@@ -53,12 +53,16 @@ class DataDetail extends React.Component{
 
     }
 
+    handleImage() {
+        window.location.hash = '/'
+    }
+
     render() {
         const {navLists, notLogin, isLogin} = this.state;
         return(
             <div id="data_detail">
                 <div className="title_fixed" ref='titleFixed'>
-                    <img src={HeadSrc} className="title_img"/>
+                    <img src={HeadSrc} className="title_img" onClick={this.handleImage}/>
                     <ul onClick={this.handleNavlist}>
                         {
                             navLists.map(function (list, arg2) {

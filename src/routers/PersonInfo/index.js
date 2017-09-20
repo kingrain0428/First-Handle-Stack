@@ -118,6 +118,12 @@ class Demo extends React.Component{
                 isShow: false
             })
             this.props.form.setFieldsValue(infoFormValue);
+            this.setState({
+                fileList: infoFormValue.idCardReverse.file,
+                fileListOne: infoFormValue.upBusinessLicenseNumber.file,
+                fileListTwo: infoFormValue.handleIDCard.file,
+                fileListThree: infoFormValue.idCardFront.file,
+            })
         }
     }
 
@@ -411,7 +417,7 @@ class Demo extends React.Component{
                     <FormItem
                         wrapperCol={{ span: 12, offset: 6 }}
                     >
-                        <Button type="primary" htmlType="submit">提交认证</Button>
+                        <Button style={{display: !isShow ? 'block' : 'none'}} type="primary" htmlType="submit">提交认证</Button>
                     </FormItem>
                 </Form>
             </div>
