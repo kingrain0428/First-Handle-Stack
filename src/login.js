@@ -24,7 +24,7 @@ class NormalLoginForm extends React.Component {
             if (!err) {
                 if (values.password === '123456' && values.userName === '海象金服') {
                     localStorage.setItem('isLogin', true)
-                    localStorage.setItem('navLists', ['海象理财', '我要投资', '我要借款', '个人中心'])
+                    localStorage.setItem('navLists', ['个人投资', '个人借款', '企业借款', '合作平台'])
                     location.hash = '/'
                 } else {
                     this.setState({

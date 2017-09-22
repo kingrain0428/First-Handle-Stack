@@ -10,7 +10,8 @@ import DataDetail from './routers/DataDetail/index';
 //投资
 import InvestTotal from './routers/InvestTotal/index';
 import InvestInvest from './routers/InvestInvest/index';
-import InvestClear from './routers/InvestClear/index'
+import InvestClear from './routers/InvestClear/index';
+
 
 //理财
 import MoneyTotal from './routers/MoneyTotal/index';
@@ -26,6 +27,11 @@ import Info from './routers/PersonInfo/index';
 import Node from './routers/PersonNode/index';
 import Contract from './routers/PersonContract/index';
 import Appstore from './routers/PersonApps/index';
+
+//个人投资
+import InvestIndex from './routers/InvestIndex/index';
+import Invest from './routers/Invest/index';
+import InvestBorrow from './routers/InvestBorrow/index';
 //登陆
 import NormalLogin from './login';
 //后台布局
@@ -54,6 +60,11 @@ const Apps = () => (
                 <Route path="/contract" component={Contract}/>
                 <Route path="/app" component={Appstore}/>
                 <Route path="/node" component={Node}/>
+
+                /*个人投资*/
+                <Route path='/investIndex' component={InvestIndex}/>
+                <Route path='/invest' component={Invest}/>
+                <Route path="/borrow" component={InvestBorrow}/>
 
             </Route>
         </div>

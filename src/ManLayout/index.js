@@ -15,9 +15,9 @@ class SiderDemo extends React.Component {
         collapsed: false,
         data: [
             [
-                { key: 'investTotal', name: '总账户', icon: 'switcher'},
-                { key: 'investInvest', name: '投资账户', icon: 'solution'},
-                { key: 'investClear', name: '结算账户', icon: 'exception'}
+                { key: 'investIndex', name: '首页', icon: 'switcher'},
+                { key: 'invest', name: '投资', icon: 'solution'},
+                { key: 'borrow', name: '借款', icon: 'exception'}
             ],
             [
                 { key: 'loanTotal', name: '总账户', icon: 'switcher'},
@@ -51,7 +51,7 @@ class SiderDemo extends React.Component {
         let navID = localStorage.getItem('navID');
         let data = this.state.data;
         switch (navID) {
-            case '2':
+            case '1':
                 this.setState({
                     menuLists : data[0]
                 })
@@ -61,7 +61,7 @@ class SiderDemo extends React.Component {
                     menuLists : data[1]
                 })
                 break
-            case '1':
+            case '2':
                 this.setState({
                     menuLists : data[2]
                 })

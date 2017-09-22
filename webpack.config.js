@@ -66,7 +66,7 @@ module.exports = {
     },
     plugins: [
         new Webpack.optimize.CommonsChunkPlugin({
-            names: ['app', 'vendor'],
+            names: 'vendor',
             minChunks: 1
         }),
         new Webpack.optimize.UglifyJsPlugin({

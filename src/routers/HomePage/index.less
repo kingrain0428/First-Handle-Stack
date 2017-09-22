@@ -43,11 +43,21 @@
       line-height: 80px;
       text-align:right;
       span{
-        cursor:pointer
+        cursor:pointer;
+        display: inline-block;
+        text-indent: 20px;
+        background: url("../../assets/offline.png") no-repeat left center;
+        -webkit-background-size: 14px;
+        background-size: 14px;
       }
     }
     .off span:hover, li:hover{
       color:#0252d6;
+    }
+    .off span:hover{
+      background: url("../../assets/offline_hover.png") no-repeat left center;
+      -webkit-background-size: 14px;
+      background-size: 14px;
     }
   }
   .table_data, .title_banner, .title_fixed{

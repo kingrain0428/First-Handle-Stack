@@ -95,16 +95,16 @@ class HomePage extends React.Component{
     handleNavlist(e) {
         let text = e.target.innerHTML;
         switch(text) {
-            case '海象理财':
+            case '个人投资':
                 localStorage.setItem('navID', 1)
                 break;
-            case '我要投资':
+            case '个人借款':
                 localStorage.setItem('navID', 2)
                 break;
-            case '我要借款':
+            case '企业借款':
                 localStorage.setItem('navID', 3)
                 break;
-            case '个人中心':
+            case '合作平台':
                 localStorage.setItem('navID', 4)
                 break;
         }
