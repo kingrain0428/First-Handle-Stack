@@ -47,30 +47,27 @@ class InvestTotal extends React.Component{
                 key: 'totalRecharge',
                 dataIndex: 'totalRecharge',
                 width: '14%'
-
             }, {
                 title: '总赎回金额',
                 key: 'totalRedemption',
                 dataIndex: 'totalRedemption',
                 width: '14%'
-
             }, {
                 title: '总收益金额',
                 key: 'totalRevenue',
                 dataIndex: 'totalRevenue',
                 width: '14%'
-
             }, {
                 title: '创建时间',
                 key: 'createTime',
                 dataIndex: 'createTime',
                 width: '13%'
-
             }
         ];
 
         const data = [
             {
+                key: '1',
                 account: '1001',
                 accountName: '海象理财',
                 totalInvestment: '21,928,257,276',
@@ -80,6 +77,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,213,273,283',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '2',
                 account: '1002',
                 accountName: '全融',
                 totalInvestment: '22,345,825,279',
@@ -89,6 +87,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,170,273,200',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '3',
                 account: '1003',
                 accountName: '趣分期',
                 totalInvestment: '23,928,257,391',
@@ -98,6 +97,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,369,273,372',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '4',
                 account: '1004',
                 accountName: '玖富理财',
                 totalInvestment: '21,928,257,636',
@@ -107,6 +107,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,113,273,810',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '5',
                 account: '1005',
                 accountName: '拍拍贷',
                 totalInvestment: '24,283,883,190',
@@ -116,6 +117,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,413,273,901',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '6',
                 account: '1006',
                 accountName: '翼龙贷',
                 totalInvestment: '21,928,257,276',
@@ -125,6 +127,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,213,273,283',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '7',
                 account: '1007',
                 accountName: '凡普金科',
                 totalInvestment: '20,928,257,200',
@@ -134,6 +137,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,013,273,200',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '8',
                 account: '1008',
                 accountName: '宜人贷',
                 totalInvestment: '21,928,257,276',
@@ -143,6 +147,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,213,273,283',
                 createTime: '2017-10-10'
             }, {
+                key: '9',
                 account: '1009',
                 accountName: '悟空理财',
                 totalInvestment: '27,928,257,291',
@@ -152,6 +157,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,713,273,010',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '10',
                 account: '1010',
                 accountName: '小金理财',
                 totalInvestment: '26,928,257,276',
@@ -161,6 +167,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,613,273,912',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '11',
                 account: '1011',
                 accountName: '联动金融',
                 totalInvestment: '25,928,257,382',
@@ -170,6 +177,7 @@ class InvestTotal extends React.Component{
                 totalRevenue: '2,513,273,876',
                 createTime: '2017-10-' + (parseInt(Math.random() * 15) + 1)
             }, {
+                key: '12',
                 account: '1012',
                 accountName: '微融网',
                 totalInvestment: '29,928,257,182',

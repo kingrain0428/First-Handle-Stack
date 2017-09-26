@@ -68,17 +68,17 @@ module.exports = {
         new Webpack.optimize.CommonsChunkPlugin({
             names: 'vendor',
             minChunks: 1
-        }),
-        new Webpack.optimize.UglifyJsPlugin({
-            mangle: {
-                except: ['$super', '$', 'exports', 'require', 'module', '_']
-            },
-            compress: {
-                warnings: false
-            },
-            output:{
-                comments: false
-            }
+        // }),
+        // new Webpack.optimize.UglifyJsPlugin({
+        //     mangle: {
+        //         except: ['$super', '$', 'exports', 'require', 'module', '_']
+        //     },
+        //     compress: {
+        //         warnings: false
+        //     },
+        //     output:{
+        //         comments: false
+        //     }
         })
     ]
 }

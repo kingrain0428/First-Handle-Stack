@@ -5,7 +5,7 @@ webpack@3.5.6 + react@15.6.1 + react-router@react-router@3.0.5
 npm install 
 
 开启服务
-npm run server
+npm run dev
 
 打包
 npm run build

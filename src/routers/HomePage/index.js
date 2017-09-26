@@ -12,33 +12,68 @@ class HomePage extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            data: [
-                {
-                    apply: '1001',
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c161',
-                    dealQuantity: 32,
-                    dealTime: '2017-09-12',
-                }, {
-                    apply: '1002',
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c162',
-                    dealQuantity: 48,
-                    dealTime: '2017-09-13',
-                }, {
-                    apply: '1003',
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c163',
-                    dealQuantity: 12,
-                    dealTime: '2017-09-14',
-                }, {
-                    apply: '1004',
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c164',
-                    dealQuantity: 37,
-                    dealTime: '2017-09-10',
-                }, {
-                    apply: '1005',
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c165',
-                    dealQuantity: 78,
-                    dealTime: '2017-09-02',
-                }],
+            data: [{
+                key: '1001',
+                apply: '1001',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c161',
+                dealQuantity: 32,
+                dealTime: '2017-09-12',
+            }, {
+                key: '1002',
+                apply: '1002',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c162',
+                dealQuantity: 48,
+                dealTime: '2017-09-13',
+            }, {
+                key: '1003',
+                apply: '1003',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c163',
+                dealQuantity: 12,
+                dealTime: '2017-09-14',
+            }, {
+                key: '1004',
+                apply: '1004',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c164',
+                dealQuantity: 37,
+                dealTime: '2017-09-10',
+            }, {
+                key: '1005',
+                apply: '1005',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c165',
+                dealQuantity: 78,
+                dealTime: '2017-09-02',
+            }],
+            dataClock: [{
+                key: '2001',
+                apply: '2001',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c161',
+                dealQuantity: 32,
+                dealTime: '2017-09-12',
+            }, {
+                key: '2002',
+                apply: '2002',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c162',
+                dealQuantity: 48,
+                dealTime: '2017-09-13',
+            }, {
+                key: '2003',
+                apply: '2003',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c163',
+                dealQuantity: 12,
+                dealTime: '2017-09-14',
+            }, {
+                key: '2004',
+                apply: '2004',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c164',
+                dealQuantity: 37,
+                dealTime: '2017-09-10',
+            }, {
+                key: '2005',
+                apply: '2005',
+                dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c165',
+                dealQuantity: 78,
+                dealTime: '2017-09-02',
+            }],
             isLogin: 'none',
             notLogin: 'block',
             navLists: [],
@@ -46,6 +81,7 @@ class HomePage extends React.Component{
             users: 1576230,
             transactNum: 37639,
             id: 1005,
+            idClock: 2005,
             dealID: 165
         }
         this.orderScroll = this.orderScroll.bind(this);
@@ -67,13 +103,22 @@ class HomePage extends React.Component{
                 users: me.state.users + 2,
                 transactNum: me.state.transactNum + 1,
                 id: me.state.id + 1,
+                idClock: me.state.idClock + 1,
                 dealID: me.state.dealID + 1,
                 data: [me.state.data[1], me.state.data[2], me.state.data[3], me.state.data[4], {
-                            apply: me.state.id + 1,
-                            dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID),
-                            dealQuantity: (parseInt(Math.random() * 100)  + 1),
-                            dealTime: '2017-09-' + (parseInt(Math.random() * 15)  + 1),
-                        }]
+                    key: me.state.id + 1,
+                    apply: me.state.id + 1,
+                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID),
+                    dealQuantity: (parseInt(Math.random() * 100)  + 1),
+                    dealTime: '2017-09-' + (parseInt(Math.random() * 15)  + 1),
+                }],
+                dataClock: [me.state.dataClock[1], me.state.dataClock[2], me.state.dataClock[3], me.state.dataClock[4], {
+                    key: me.state.idClock + 1,
+                    apply: me.state.idClock + 1,
+                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID),
+                    dealQuantity: (parseInt(Math.random() * 100)  + 1),
+                    dealTime: '2017-09-' + (parseInt(Math.random() * 15)  + 1),
+                }]
             })
         }, 1000)
     }
@@ -116,7 +161,7 @@ class HomePage extends React.Component{
         window.location.reload()
     }
     render() {
-        const { notLogin, isLogin, navLists, data, blockHeight, users, transactNum} = this.state;
+        const { notLogin, isLogin, navLists, data, dataClock, blockHeight, users, transactNum} = this.state;
         const columns = [
             {
                 title: '所属应用',
@@ -181,8 +226,8 @@ class HomePage extends React.Component{
                     </div>
                 </div>
                 <div className="table_data">
-                    <Table rowKey="homepageOne" pagination={false} columns={columns} dataSource={data} title={() => '最新交易'} />
-                    <Table rowKey="homepageTwo" pagination={false} columns={columns} dataSource={data} title={() => '最新区块'} />
+                    <Table pagination={false} columns={columns} dataSource={data} title={() => '最新交易'} />
+                    <Table pagination={false} columns={columns} dataSource={dataClock} title={() => '最新区块'} />
                 </div>
                 <div className="footer">
                     <p>官方交流群:565806304</p>
