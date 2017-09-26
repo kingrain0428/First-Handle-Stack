@@ -32,6 +32,9 @@ import Appstore from './routers/PersonApps/index';
 import InvestIndex from './routers/InvestIndex/index';
 import Invest from './routers/Invest/index';
 import InvestBorrow from './routers/InvestBorrow/index';
+
+import InvestList from './routers/InvestList/index';
+import InvestBoorwoLists from './routers/InvestBorrowLists/index';
 //登陆
 import NormalLogin from './login';
 //后台布局
@@ -66,6 +69,8 @@ const Apps = () => (
                 <Route path='/invest' component={Invest}/>
                 <Route path="/borrow" component={InvestBorrow}/>
 
+                <Route path="/investList" component={InvestList}/>
+                <Route path="/investBorrowLists" component={InvestBoorwoLists}/>
             </Route>
         </div>
     </Router>

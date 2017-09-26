@@ -1,0 +1,127 @@
+#invest_borrow{
+  .total{
+    height: 144px;
+    width: 90%;
+    border: 1px solid rgba(235, 235, 235, 1);
+    border-radius: 4px;
+    padding-top: 35px;
+  }
+  .total_detail{
+    width: 100%;
+    font-size: 12px;
+    border-top: 1px solid rgba(235, 235, 235, 1);
+    display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .amount, .amountMonth, .amountDay{
+    width: 500px;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    color: #989898;
+    padding: 25px 110px;
+    position: relative;
+    div{
+      width: 56px;
+      height: 56px;
+      //border: 1px solid red;
+      position: absolute;
+      left: 30px;
+      top: 25px;
+    }
+    h2{
+      font-size: 28px;
+      color: #666666;
+    }
+    img{
+      width: 25px;
+      height: 28px;
+      position: absolute;
+      left:0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  .amount{
+    div{
+      background: url("../../assets/borrow_1.png") no-repeat center;
+      background-size: 100%;
+      -webkit-background-size: 100%;
+    }
+  }
+  .amountMonth{
+    div{
+      background: url("../../assets/borrow_3.png") no-repeat center;
+      background-size: 100%;
+      -webkit-background-size: 100%;
+    }
+  }
+  .amountDay{
+    div{
+      background: url("../../assets/borrow_5.png") no-repeat center;
+      background-size: 100%;
+      -webkit-background-size: 100%;
+    }
+  }
+  .invest_lists{
+    margin-top: 50px;
+  }
+  .invest_list{
+    width: 386px;
+    height: 160px;
+    border: 1px solid rgba(235, 235, 235, 1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0 100px 40px 0;
+    h2{
+      border-bottom: 1px solid rgba(235, 235, 235, 1);
+      font-size: 14px;
+      color: rgb(102, 102, 102);
+      padding: 7px 16px;
+      p{
+        //display: inline-block;
+        margin-left: 40%;
+        width: 49px;
+        height: 20px;
+        font-size: 12px;
+        color: #FFFFFF;
+        border-radius: 10px;
+        background: rgb(255, 102, 0);
+        line-height: 20px;
+        text-align: center;
+      }
+      span{
+        float: right;
+      }
+      a:visited, a:link{
+        text-decoration: none;
+      }
+    }
+    .left{
+      float: left;
+      padding: 17px 0 0 12px;
+      p{
+        color: rgb(152, 152, 152);
+        line-height: 22px;
+      }
+    }
+    .right{
+      float: left;
+      padding: 30px 0 0 70px;
+      color: rgb(152, 152, 152);
+      h3{
+        font-size: 28px;
+        color: rgb(102, 102, 102);
+      }
+    }
+  }
+}

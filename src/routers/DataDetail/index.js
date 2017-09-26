@@ -36,18 +36,18 @@ class DataDetail extends React.Component{
     handleNavlist(e) {
         let text = e.target.innerHTML;
         switch(text) {
-            case '海象理财':
+            case '个人投资':
                 localStorage.setItem('navID', 1)
-                break
-            case '我要投资':
+                break;
+            case '个人借款':
                 localStorage.setItem('navID', 2)
-                break
-            case '我要借款':
+                break;
+            case '企业借款':
                 localStorage.setItem('navID', 3)
-                break
-            case '个人中心':
+                break;
+            case '合作平台':
                 localStorage.setItem('navID', 4)
-                break
+                break;
         }
         location.hash = '/layout'
 

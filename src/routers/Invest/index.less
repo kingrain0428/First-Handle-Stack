@@ -82,4 +82,58 @@
       text-indent: 24px;
     }
   }
+  .case:after{
+    content: '';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    display: block;
+    line-height: 0;
+  }
+  .case{
+    zoom: 1;
+  }
+  .invest_lists{
+    margin-top: 50px;
+  }
+  .invest_list{
+    width: 386px;
+    height: 160px;
+    border: 1px solid rgba(235, 235, 235, 1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0 100px 40px 0;
+    h2{
+      border-bottom: 1px solid rgba(235, 235, 235, 1);
+      font-size: 14px;
+      color: rgb(102, 102, 102);
+      padding: 7px 16px;
+      span{
+        float: right;
+      }
+      a:visited, a:link{
+        text-decoration: none;
+      }
+    }
+    .left{
+      float: left;
+      padding: 17px 0 0 12px;
+      p{
+        color: rgb(152, 152, 152);
+        line-height: 22px;
+      }
+    }
+    .right{
+      float: left;
+      padding: 30px 0 0 70px;
+      color: rgb(152, 152, 152);
+      h3{
+        font-size: 28px;
+        color: rgb(102, 102, 102);
+      }
+    }
+  }
 }
