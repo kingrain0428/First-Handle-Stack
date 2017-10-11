@@ -34,7 +34,7 @@ import Invest from './routers/Invest/index';
 import InvestBorrow from './routers/InvestBorrow/index';
 
 import InvestList from './routers/InvestList/index';
-import InvestBoorwoLists from './routers/InvestBorrowLists/index';
+import InvestBorrowLists from './routers/InvestBorrowLists/index';
 //登陆
 import NormalLogin from './login';
 //后台布局
@@ -70,7 +70,7 @@ const Apps = () => (
                 <Route path="/borrow" component={InvestBorrow}/>
 
                 <Route path="/investList" component={InvestList}/>
-                <Route path="/investBorrowLists" component={InvestBoorwoLists}/>
+                <Route path="/investBorrowLists" component={InvestBorrowLists}/>
             </Route>
         </div>
     </Router>

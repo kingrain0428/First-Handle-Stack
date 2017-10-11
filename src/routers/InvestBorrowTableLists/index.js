@@ -11,7 +11,7 @@ const columns_1 = [
         title: '资产名称',
         dataIndex: 'name',
         key: 'name',
-        render: text => <a href="#">{text}</a>,
+        render: text => <a href="javascript:void(0);">{text}</a>,
     }, {
         title: '投资金额',
         dataIndex: 'amount',

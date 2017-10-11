@@ -3,7 +3,55 @@
  */
 import React from 'react';
 import './index.less';
-import {Modal, Button} from 'antd';
+import {Modal, Button, Table} from 'antd';
+
+const columns = [
+    {
+        title: '序号',
+        dataIndex: 'id',
+        key: 'id',
+        width: 40
+    },
+    {
+        title: '名称',
+        dataIndex: 'name',
+        key: 'name',
+        width: 50
+    },
+    {
+        title: '类型',
+        dataIndex: 'type',
+        key: 'type',
+        width: 50
+    },
+    {
+        title: '交易时间',
+        dataIndex: 'dealTime',
+        key: 'dealTime'
+    },
+    {
+        title: '处理时间',
+        dataIndex: 'handTime',
+        key: 'handTime'
+    },
+    {
+        title: '回调时间',
+        dataIndex: 'callbackTime',
+        key: 'callbackTime'
+    }
+]
+const data = []
+for(let i = 1; i <= 6; i++) {
+    data.push({
+        key: i,
+        id: i,
+        name: '入账',
+        type: '存管',
+        dealTime: '2015-09-26 08:50:08',
+        handTime: '2015-09-26 08:50:08',
+        callbackTime: '2015-09-26 08:50:08'
+    })
+}
 
 class InvestModal extends React.Component{
     constructor(props) {
@@ -122,8 +170,29 @@ class InvestModal extends React.Component{
                             </ul>
                         </div>
                     </div>
-
-
+                    <div style={{display: defaultKey == '3' || defaultKey == '4' ? 'block' : 'none'}}>
+                        <div className="invest_list_modal_div">
+                            <h2>充值／提现 <span className="name">招商银行</span> <span className="number">6226 xxxx 8099</span></h2>
+                            <ul>
+                                <li>
+                                    ¥50,000.00 <span>资产金额：</span>
+                                </li>
+                                <li>
+                                    R3333333 <span>订单编号：</span>
+                                </li>
+                                <li>
+                                    2015-12-12 12:34:56 <span>充值时间：</span>
+                                </li>
+                                <li>
+                                    2015-12-12 13:44:45 <span>到账时间：</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <Table columns={columns} dataSource={data} scroll={{x: 600}} pagination={{pageSize: 5}} />
+                    </div>
+                    <div style={{display: defaultKey == '5' || defaultKey == '6' ? 'block' : 'none'}}>
+                        奖励积分内容
+                    </div>
                 </Modal>
             </div>
         )

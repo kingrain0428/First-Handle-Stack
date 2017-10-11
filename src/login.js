@@ -6,8 +6,7 @@ import { Form, Icon, Input, Button, Modal } from 'antd';
 const FormItem = Form.Item;
 import src from './assets/hx_logo.png';
 
-
-import './componentLESS/login.less'
+import './componentLESS/login.less';
 
 class NormalLoginForm extends React.Component {
     constructor(props) {
