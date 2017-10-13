@@ -15,13 +15,17 @@ class SiderDemo extends React.Component {
         collapsed: false,
         data: [
             [
-                { key: 'investIndex', name: '首页', icon: 'switcher'},
-                { key: 'invest', name: '投资', icon: 'solution'},
-                { key: 'borrow', name: '借款', icon: 'exception'}
+                { key: 'invest/index', name: '首页', icon: 'home'},
+                { key: 'invest/invest', name: '投资', icon: 'area-chart'},
+                { key: 'invest/borrow', name: '借款', icon: 'pay-circle-o'}
             ],
             [
-                { key: 'loanTotal', name: '总账户', icon: 'switcher'},
-                { key: 'loanClear', name: '结算账户', icon: 'exception'}
+                { key: 'loan/index', name: '首页', icon: 'home'},
+                { key: 'loan/person', name: '个人', icon: 'user'},
+                { key: 'loan/company', name: '企业', icon: 'usergroup-add'},
+                { key: 'loan/object', name: '标的', icon: 'pushpin'},
+                { key: 'loan/expMoney', name: '体验金', icon: 'red-envelope'},
+                { key: 'loan/addCard', name: '加息卡', icon: 'credit-card'}
             ],
             [
                 { key: 'moneyTotal', name: '总账户', icon: 'switcher'},
@@ -56,12 +60,12 @@ class SiderDemo extends React.Component {
                     menuLists : data[0]
                 })
                 break
-            case '3':
+            case '2':
                 this.setState({
                     menuLists : data[1]
                 })
                 break
-            case '2':
+            case '3':
                 this.setState({
                     menuLists : data[2]
                 })

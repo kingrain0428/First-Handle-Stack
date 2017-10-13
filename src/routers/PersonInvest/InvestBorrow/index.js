@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-
 import './index.less';
 
 class InvestTotal extends React.Component{
@@ -17,7 +16,8 @@ class InvestTotal extends React.Component{
                     earn: '89.87',
                     earnTotal: '123498.00',
                     rate: '7.5%',
-                    link: 'investList'
+                    link: 'invest/investBorrowLists',
+                    isClear: true
                 },
                 {
                     key: '2',
@@ -27,7 +27,8 @@ class InvestTotal extends React.Component{
                     earn: '89.87',
                     earnTotal: '123498.00',
                     rate: '7.5%',
-                    link: 'investList'
+                    link: 'invest/investBorrowLists',
+                    isClear: false
                 },
                 {
                     key: '3',
@@ -37,7 +38,8 @@ class InvestTotal extends React.Component{
                     earn: '89.87',
                     earnTotal: '123498.00',
                     rate: '7.5%',
-                    link: 'investList'
+                    link: 'invest/investBorrowLists',
+                    isClear: false
                 },
                 {
                     key: '4',
@@ -47,7 +49,8 @@ class InvestTotal extends React.Component{
                     earn: '89.87',
                     earnTotal: '123498.00',
                     rate: '7.5%',
-                    link: 'investList'
+                    link: 'invest/investBorrowLists',
+                    isClear: false
                 }
             ]
         }
@@ -60,44 +63,38 @@ class InvestTotal extends React.Component{
 
 
         return(
-            <div id="invest">
-                <div className="clock_1">
-                    <p className="content">
-                        <span>资产总额</span>
-                        <span></span>
-                    </p>
-                    <p className="money">
-                        ¥ 6,777,783.00
-                    </p>
-                    <div className="bg_div">
-                        <div></div>
-                    </div>
+            <div id="invest_borrow">
+                <div className="total">
+                    <ul className="total_detail">
+                        <li className="amount">
+                            <div>
+                                <img src={require('../../../assets/borrow_2.png')}/>
+                            </div>
+                            <p>借款总金额</p>
+                            <h2>¥124,345</h2>
+                        </li>
+                        <li className="amountMonth">
+                            <div>
+                                <img src={require('../../../assets/borrow_4.png')}/>
+                            </div>
+                            <p>本月需还总额</p>
+                            <h2>¥54,322</h2>
+                        </li>
+                        <li className="amountDay">
+                            <div>
+                                <img src={require('../../../assets/borrow_6.png')}/>
+                            </div>
+                            <p>今日需还总额</p>
+                            <h2>¥68,123</h2>
+                        </li>
+                    </ul>
                 </div>
-                <div className="clock_2">
-                    <p className="content">
-                        <span>昨日收益</span>
-                        <span>10% 收益率</span>
-                    </p>
-                    <p className="rate">
-                        56%
-                    </p>
-                </div>
-                <div className="clock_3">
-                    <p className="content">
-                        <span>总收益</span>
-                        <span>10% 收益率</span>
-                    </p>
-                    <p className="rate">
-                        56%
-                    </p>
-                </div>
-                <div className="case"></div>
                 <ul className="invest_lists">
                     {
                         this.state.lists.map((list) => {
                             return (
                                 <li className="invest_list" key={list.key}>
-                                    <h2>{list.titleText} <span><Link to={{ pathname: list.link, query: { title: list.titleText } }} >···</Link></span></h2>
+                                    <h2>{list.titleText} <p style={{display: list.isClear ? 'inline-block' : 'none'}}>已还清</p> <span><Link to={{ pathname: list.link, query: { title: list.titleText } }} >···</Link></span></h2>
                                     <div className="left">
                                         <p>投资总额： ¥{list.investTotal}</p>
                                         <p>账户余额：¥{list.balance}</p>

@@ -108,19 +108,19 @@ class HomePage extends React.Component{
                 data: [me.state.data[1], me.state.data[2], me.state.data[3], me.state.data[4], {
                     key: me.state.id + 1,
                     apply: me.state.id + 1,
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID),
+                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID + 1),
                     dealQuantity: (parseInt(Math.random() * 100)  + 1),
                     dealTime: '2017-09-' + (parseInt(Math.random() * 15)  + 1),
                 }],
                 dataClock: [me.state.dataClock[1], me.state.dataClock[2], me.state.dataClock[3], me.state.dataClock[4], {
                     key: me.state.idClock + 1,
                     apply: me.state.idClock + 1,
-                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID),
+                    dealID: 'de0282a630fa32e9b4b186d50d8e18cafb3d9654732c15da79e2e4c76197c' + (me.state.dealID + 1),
                     dealQuantity: (parseInt(Math.random() * 100)  + 1),
                     dealTime: '2017-09-' + (parseInt(Math.random() * 15)  + 1),
                 }]
             })
-        }, 1000)
+        }, 2000)
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.orderScroll);
