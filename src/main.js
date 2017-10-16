@@ -22,7 +22,9 @@ import InvestBorrow from './routers/PersonInvest/InvestBorrow/index';
 import InvestList from './routers/PersonInvest/InvestList/index';
 import InvestBorrowLists from './routers/PersonInvest/InvestBorrowLists/index';
 //个人借款
-import LoanIndex from './routers/PersonLoan/LoanIndex/index'
+import LoanIndex from './routers/PersonLoan/LoanIndex/index';
+import PersonEntrance from './routers/PersonLoan/PersonEntrance/index';
+import CompanyEntrance from './routers/PersonLoan/CompeanyEntrance/index';
 //登陆
 import NormalLogin from './login';
 //后台布局
@@ -44,13 +46,13 @@ const Apps = () => (
                 <Route path="/invest/investBorrowLists" component={InvestBorrowLists}/>
                 /*个人借款*/
                 <Route path='/loan/index' component={LoanIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
-                <Route path='/invest/index' component={InvestIndex}/>
+                <Route path='/loan/person/entrance' component={PersonEntrance}/>
+                <Route path='/loan/company/entrance' component={CompanyEntrance}/>
+                <Route path='/loan/index' component={InvestIndex}/>
+                <Route path='/loan/index' component={InvestIndex}/>
+                <Route path='/loan/index' component={InvestIndex}/>
+                <Route path='/loan/index' component={InvestIndex}/>
+                <Route path='/loan/index' component={InvestIndex}/>
 
             </Route>
         </div>

@@ -21,8 +21,8 @@ class SiderDemo extends React.Component {
             ],
             [
                 { key: 'loan/index', name: '首页', icon: 'home'},
-                { key: 'loan/person', name: '个人', icon: 'user'},
-                { key: 'loan/company', name: '企业', icon: 'usergroup-add'},
+                { key: 'loan/person/entrance', name: '个人', icon: 'user'},
+                { key: 'loan/company/entrance', name: '企业', icon: 'usergroup-add'},
                 { key: 'loan/object', name: '标的', icon: 'pushpin'},
                 { key: 'loan/expMoney', name: '体验金', icon: 'red-envelope'},
                 { key: 'loan/addCard', name: '加息卡', icon: 'credit-card'}

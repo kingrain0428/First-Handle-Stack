@@ -60,19 +60,6 @@ class Demo extends React.Component{
                         )}
                     </FormItem>
                     <FormItem
-                        {...formItemLayout}
-                        label="营业执照号："
-                        hasFeedback
-                    >
-                        {getFieldDecorator('businessLicenseNumber', {
-                            rules: [
-                                {required: true, message: '请填写营业执照号'}
-                            ]
-                        })(
-                            <Input placeholder="请填写营业执照号"/>
-                        )}
-                    </FormItem>
-                    <FormItem
                         wrapperCol={{ span: 12, offset: 6 }}
                     >
                         <Button type="primary" htmlType="submit">提交</Button>
